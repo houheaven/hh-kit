@@ -20,3 +20,7 @@ yarn-error.log*
 # Development
 node_modules
 *.tgz
+
+# Build
+dist
+.turbo
