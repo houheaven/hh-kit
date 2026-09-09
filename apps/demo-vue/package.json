@@ -1,0 +1,22 @@
+{
+  "name": "@houheaven/demo-vue",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@houheaven/kit-vue": "workspace:*",
+    "vue": "3.5.42"
+  },
+  "devDependencies": {
+    "@houheaven/tsconfig": "workspace:*",
+    "@vitejs/plugin-vue": "6.0.8",
+    "typescript": "5.9.3",
+    "vite": "7.3.6",
+    "vue-tsc": "3.3.11"
+  }
+}
