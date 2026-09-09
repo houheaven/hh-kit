@@ -1,0 +1,4 @@
+{
+  "extends": "@houheaven/tsconfig/lib.json",
+  "include": ["src"]
+}

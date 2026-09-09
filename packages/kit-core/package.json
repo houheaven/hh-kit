@@ -1,0 +1,32 @@
+{
+  "name": "@houheaven/kit-core",
+  "version": "0.0.0",
+  "private": true,
+  "description": "后天堂套件无框架核心层(纯 TS,业务逻辑)",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": ["dist"],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "typecheck": "tsc --noEmit",
+    "clean": "rm -rf dist .turbo"
+  },
+  "dependencies": {
+    "@houheaven/kit-shared": "workspace:*"
+  },
+  "devDependencies": {
+    "@houheaven/tsconfig": "workspace:*",
+    "tsup": "8.5.1",
+    "typescript": "5.9.3"
+  }
+}
