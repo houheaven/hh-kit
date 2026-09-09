@@ -1,0 +1,48 @@
+{
+  "name": "@houheaven/kit-react",
+  "version": "0.0.1",
+  "description": "后天堂 React 18+ 组件库",
+  "author": "立树",
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./style.css": "./dist/style.css"
+  },
+  "files": ["dist"],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite build --watch",
+    "typecheck": "tsc --noEmit",
+    "clean": "rm -rf dist .turbo"
+  },
+  "peerDependencies": {
+    "react": ">=18"
+  },
+  "dependencies": {
+    "@houheaven/kit-core": "workspace:*",
+    "@houheaven/kit-icons": "workspace:*",
+    "@houheaven/kit-shared": "workspace:*",
+    "@houheaven/kit-styles": "workspace:*",
+    "@houheaven/kit-tokens": "workspace:*"
+  },
+  "devDependencies": {
+    "@houheaven/tsconfig": "workspace:*",
+    "@types/react": "18.3.31",
+    "@vitejs/plugin-react": "4.7.0",
+    "react": "18.3.1",
+    "typescript": "5.9.3",
+    "vite": "7.3.6",
+    "vite-plugin-dts": "5.1.0"
+  }
+}
