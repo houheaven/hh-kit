@@ -1,0 +1,25 @@
+{
+  "name": "@houheaven/kit-monorepo",
+  "version": "1.0.0",
+  "author": "立树",
+  "license": "ISC",
+  "description": "后天堂套件，支持 Vue、React 等前端框架",
+  "private": true,
+  "packageManager": "pnpm@12.3.4",
+  "scripts": {
+    "build": "turbo run build",
+    "dev": "turbo run dev",
+    "test": "turbo run test",
+    "lint": "turbo run lint",
+    "typecheck": "turbo run typecheck",
+    "clean": "turbo run clean && rm -rf node_modules",
+    "changeset": "changeset",
+    "version-packages": "changeset version",
+    "release": "turbo run build --filter=./packages/kit-vue --filter=./packages/kit-react && changeset publish"
+  },
+  "devDependencies": {
+    "@changesets/cli": "3.0.2",
+    "turbo": "2.10.12",
+    "typescript": "5.9.3"
+  }
+}
