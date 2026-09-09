@@ -1,0 +1,7 @@
+{
+  "extends": "@houheaven/tsconfig/lib.json",
+  "compilerOptions": {
+    "jsx": "preserve"
+  },
+  "include": ["src"]
+}

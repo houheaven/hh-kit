@@ -1,0 +1,44 @@
+{
+  "name": "@houheaven/kit-icons",
+  "version": "0.0.0",
+  "private": true,
+  "description": "SVG 图标资产,同时输出 Vue / React 组件",
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    },
+    "./vue": {
+      "types": "./dist/vue/index.d.ts",
+      "import": "./dist/vue/index.js"
+    },
+    "./react": {
+      "types": "./dist/react/index.d.ts",
+      "import": "./dist/react/index.js"
+    }
+  },
+  "files": ["dist", "svg"],
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "typecheck": "tsc --noEmit",
+    "clean": "rm -rf dist .turbo"
+  },
+  "peerDependencies": {
+    "react": ">=18",
+    "vue": ">=3"
+  },
+  "peerDependenciesMeta": {
+    "react": { "optional": true },
+    "vue": { "optional": true }
+  },
+  "devDependencies": {
+    "@houheaven/tsconfig": "workspace:*",
+    "@types/react": "18.3.31",
+    "react": "18.3.1",
+    "tsup": "8.5.1",
+    "typescript": "5.9.3",
+    "vue": "3.5.42"
+  }
+}
