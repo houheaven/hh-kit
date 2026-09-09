@@ -1,0 +1,14 @@
+/* 工具类:项目通用的小型工具样式 */
+.hh-flex {
+  display: flex;
+}
+
+.hh-flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hh-hidden {
+  display: none !important;
+}
