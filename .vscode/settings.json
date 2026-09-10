@@ -1,0 +1,124 @@
+{
+  // ========================================================
+  // VScode Config
+  // 作者：立树
+  // 版本：1.4.1
+  // 日期：2025-07-24
+  // ========================================================
+  // 工作台
+  "workbench.colorTheme": "Visual Studio Dark",
+  // 编辑器
+  "editor.linkedEditing": true,                                           // 链接编辑功能（编辑 HTML/JSX 标签名称时，对应的开始标签和结束标签会同步修改）
+  "editor.renderControlCharacters": true,                                 // 编辑器中显示空格、tab符号
+  "editor.renderWhitespace": "all",                                       // 编辑器中显示空格、tab符号
+  "editor.detectIndentation": false,                                      // 打开文件时，检测缩进（推荐关闭）
+  "editor.tabSize": 2,                                                    // 缩进使用 2 个空格
+  "editor.tabCompletion": "on",                                           // 启用 Tab 自动完成
+  "editor.insertSpaces": true,                                            // 使用空格而不是 Tab 进行缩进
+  "editor.formatOnType": false,                                           // 在输入时，是否自动格式化代码
+  "editor.formatOnSave": true,                                            // 保存文件时，是否自动格式化代码
+  "editor.codeActionsOnSave": {
+    "source.fixAll.stylelint": "explicit",                                // 保存文件时，自动修复 stylelint 错误
+    "source.fixAll.eslint": "explicit"                                    // 保存文件时，自动修复 eslint 错误
+  },
+  // 文件
+  "files.eol": "\n",
+  "files.trimTrailingWhitespace": false,                                  // 保存文件时，是否删除行末空格、tab 缩进
+  "files.associations": {                                                 // 文件关联
+    "settings.json": "jsonc",                                             // 修改 json 文件关联为 jsonc，可以使其关闭 Prettier 格式化
+    "tsconfig.json": "jsonc",                                             // 修改 json 文件关联为 jsonc，可以使其关闭 Prettier 格式化
+    // "**/*/file_name.json": "jsonc",
+  },
+  // html
+  "html.validate.styles": true,
+  "html.validate.scripts": true,
+  "html.format.enable": false,                                            // vscode 自带的 html 格式化功能，酌情启用（部分功能可能与 eslint 冲突）
+  "html.format.extraLiners": "",
+  "html.format.indentHandlebars": false,
+  "html.format.indentInnerHtml": false,
+  "html.format.maxPreserveNewLines": 2,
+  "html.format.wrapAttributesIndentSize": 2,
+  "html.format.wrapAttributes": "auto",
+  "html.format.wrapLineLength": 200,
+  "html.format.contentUnformatted": "pre,script",
+  "[html]": {
+    "editor.defaultFormatter": "vscode.html-language-features"
+  },
+  // JS
+  "javascript.validate.enable": false,
+  "javascript.format.enable": false,
+  "[javascript]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  // TS
+  "typescript.validate.enable": true,
+  "typescript.format.enable": false,
+  "typescript.check.tscVersion": true,
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "[typescript]": {
+    "editor.defaultFormatter": "dbaeumer.vscode-eslint"
+  },
+  // CSS
+  "css.validate": false,
+  "css.format.enable": false,
+  "[css]": {
+    "editor.defaultFormatter": "stylelint.vscode-stylelint"
+  },
+  // Less
+  "less.validate": false,
+  "less.format.enable": false,
+  "[less]": {
+    "editor.defaultFormatter": "stylelint.vscode-stylelint"
+  },
+  // JSON
+  // .vscode/settings.json 不格式化
+  // settings.json 实际上是以 jsonc 格式处理的（JSON with Comments），而不是 json 格式
+  "json.validate.enable": true,
+  "json.format.enable": true,
+  "[json]": {
+    "editor.defaultFormatter": "vscode.json-language-features"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": null
+  },
+  // PHP
+  "[php]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  // Eslint 配置
+  "eslint.enable": true,
+  "eslint.alwaysShowStatus": true,
+  "eslint.format.enable": true,
+  "eslint.workingDirectories": [{ "mode": "auto" }],                                             // ESLint 插件会自动为每个文件确定工作目录，特别适用于 monorepo
+  "eslint.validate": ["javascript", "typescript", "html", "htm", "vue", "php"],                  // 在 vscode 编辑器上显示 eslint 报错信息
+  // Stylelint 配置
+  "stylelint.enable": true,
+  "stylelint.validate": ["css", "less", "postcss", "scss", "sass", "html", "vue"],
+  // Vetur 配置
+  "vetur.format.defaultFormatter.js": "none",
+  "vetur.format.defaultFormatter.less": "none",
+  "vetur.format.defaultFormatter.css": "none",
+  "vetur.format.defaultFormatter.html": "none",
+  "vetur.format.defaultFormatter.postcss": "none",
+  "vetur.format.defaultFormatter.pug": "none",
+  "vetur.format.defaultFormatter.ts": "none",
+  "vetur.format.scriptInitialIndent": true,
+  "vetur.format.options.tabSize": 2,
+  "vetur.validation.style": true,
+  // Prettier 配置
+  // "prettier.enable": true,
+  // "prettier.configPath": ".prettierrc.js",
+  // "prettier.ignorePath": ".prettierignore",
+  // 格式化工具列表备忘录
+  "fileFormatList": {
+    "vscode.html": "vscode.html-language-features",
+    "vscode.javascript": "vscode.typescript-language-features",
+    "vscode.typescript": "vscode.typescript-language-features",
+    "vscode.jsonc": "vscode.json-language-features",
+    "eslint": "dbaeumer.vscode-eslint",
+    "prettier": "esbenp.prettier-vscode",
+    "stylelint": "stylelint.vscode-stylelint",
+    "vetur": "octref.vetur"
+  }
+}
