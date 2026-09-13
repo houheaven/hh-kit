@@ -2,8 +2,8 @@
   // ========================================================
   // VScode Config
   // 作者：立树
-  // 版本：1.4.1
-  // 日期：2025-07-24
+  // 版本：1.4.3
+  // 日期：2026-09-13
   // ========================================================
   // 工作台
   "workbench.colorTheme": "Visual Studio Dark",
@@ -27,6 +27,7 @@
   "files.associations": {                                                 // 文件关联
     "settings.json": "jsonc",                                             // 修改 json 文件关联为 jsonc，可以使其关闭 Prettier 格式化
     "tsconfig.json": "jsonc",                                             // 修改 json 文件关联为 jsonc，可以使其关闭 Prettier 格式化
+    "turbo.json": "jsonc",                                                // 修改 json 文件关联为 jsonc，可以使其关闭 Prettier 格式化
     // "**/*/file_name.json": "jsonc",
   },
   // html
@@ -86,12 +87,24 @@
     "editor.defaultFormatter": "esbenp.prettier-vscode",
     "editor.formatOnSave": true
   },
+  "[markdown]": {
+    "editor.formatOnSave": false
+  },
   // Eslint 配置
   "eslint.enable": true,
   "eslint.alwaysShowStatus": true,
   "eslint.format.enable": true,
-  "eslint.workingDirectories": [{ "mode": "auto" }],                                             // ESLint 插件会自动为每个文件确定工作目录，特别适用于 monorepo
-  "eslint.validate": ["javascript", "typescript", "html", "htm", "vue", "php"],                  // 在 vscode 编辑器上显示 eslint 报错信息
+  "eslint.workingDirectories": [{ "mode": "auto" }],                      // ESLint 插件会自动为每个文件确定工作目录，特别适用于 monorepo
+  "eslint.validate": [                                                    // 在 vscode 编辑器上显示 eslint 报错信息
+    "javascript",
+    "javascriptreact",
+    "typescript",
+    "typescriptreact",
+    "html",
+    "htm",
+    "vue",
+    "php"
+  ],
   // Stylelint 配置
   "stylelint.enable": true,
   "stylelint.validate": ["css", "less", "postcss", "scss", "sass", "html", "vue"],
