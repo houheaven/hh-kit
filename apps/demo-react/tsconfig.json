@@ -1,4 +1,4 @@
 {
   "extends": "@houheaven/tsconfig/react.json",
-  "include": ["src"]
+  "include": ["src", "vite.config.ts"]
 }
