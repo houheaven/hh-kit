@@ -10,7 +10,7 @@
     "build": "turbo run build",
     "dev": "turbo run dev",
     "test": "turbo run test",
-    "lint": "turbo run lint",
+    "lint": "eslint .",
     "typecheck": "turbo run typecheck",
     "clean": "turbo run clean && rm -rf node_modules",
     "changeset": "changeset",
@@ -19,6 +19,8 @@
   },
   "devDependencies": {
     "@changesets/cli": "3.0.2",
+    "@houheaven/eslint-config-helper": "3.1.0",
+    "eslint": "9.39.4",
     "turbo": "2.10.12",
     "typescript": "5.9.3"
   }
