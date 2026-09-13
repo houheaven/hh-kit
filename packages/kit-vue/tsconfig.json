@@ -1,4 +1,4 @@
 {
   "extends": "@houheaven/tsconfig/vue.json",
-  "include": ["src", "*.d.ts"]
+  "include": ["src", "*.d.ts", "vite.config.ts"]
 }
