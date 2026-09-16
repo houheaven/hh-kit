@@ -1,12 +1,17 @@
 
 <template>
-  <div style="padding: 24px">
-    <h1>hh-kit Vue Demo</h1>
-    <hh-button type="primary" @click="console.log('primary clicked')">Primary</hh-button>
-    <hh-button>Default</hh-button>
-  </div>
+  <router-view />
 </template>
 
 <script setup lang="ts">
-  import { HhButton } from "@houheaven/kit-vue";
+  // 顶层壳,页面内容由 router-view 承载
 </script>
+
+<style>
+  html, body, #app {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, "PingFang SC", "Segoe UI", "Microsoft YaHei", sans-serif;
+    color: #2a2d33;
+  }
+</style>
