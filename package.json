@@ -23,7 +23,9 @@
     "clean": "turbo run clean && rm -rf node_modules",
     "changeset": "changeset",
     "version-packages": "changeset version",
-    "release": "turbo run build --filter=./packages/kit-vue --filter=./packages/kit-react && changeset publish"
+    "release": "turbo run build --filter=./packages/kit-vue --filter=./packages/kit-react && changeset publish",
+    "release-vue": "turbo run build --filter=./packages/kit-vue && changeset publish",
+    "release-react": "turbo run build --filter=./packages/kit-react && changeset publish"
   },
   "devDependencies": {
     "@changesets/cli": "3.0.2",
