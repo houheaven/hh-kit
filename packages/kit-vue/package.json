@@ -8,13 +8,29 @@
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
+  "sideEffects": [
+    "**/*.css"
+  ],
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
       "import": "./dist/index.js",
       "require": "./dist/index.cjs"
     },
-    "./style.css": "./dist/style.css"
+    "./style.css": "./dist/style.css",
+    "./hh-footer": {
+      "types": "./dist/hh-footer/index.d.ts",
+      "import": "./dist/hh-footer/index.js",
+      "require": "./dist/hh-footer/index.cjs"
+    },
+    "./hh-footer/style.css": "./dist/hh-footer/style.css",
+    "./hh-image-dialog": {
+      "types": "./dist/hh-image-dialog/index.d.ts",
+      "import": "./dist/hh-image-dialog/index.js",
+      "require": "./dist/hh-image-dialog/index.cjs"
+    },
+    "./hh-image-dialog/style.css": "./dist/hh-image-dialog/style.css",
+    "./package.json": "./package.json"
   },
   "files": [
     "dist"

@@ -1,12 +1,8 @@
 
-export {
-  default as HhFooter,
-} from "./hh-footer/hh-footer.vue";
+import hhFooter from "./hh-footer";
+import hhImageDialog from "./hh-image-dialog";
 
 export {
-  default as HhImageDialog,
-} from "./hh-image-dialog/hh-image-dialog.vue";
-
-// export {
-//   default as HhIcon,
-// } from "@houheaven/kit-icons/vue";
+  hhFooter,
+  hhImageDialog,
+};
