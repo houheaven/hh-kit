@@ -2,6 +2,7 @@
 import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
 import dts from "vite-plugin-dts";
+import { libInjectCss } from "vite-plugin-lib-inject-css";
 import { visualizer } from "rollup-plugin-visualizer";
 
 // 多入口配置:全量桶入口 + 每个组件的独立子入口
@@ -66,6 +67,8 @@ function assetFile(asset: RollupAssetLike): string {
 export default defineConfig({
   plugins: [
     vue(),
+    // 自动在每个 entry chunk 顶部注入 `import "./style.css"`,消费方只需引组件即可
+    libInjectCss(),
     dts({ include: ["src"] }),
     // build 后生成 dist/stats.html,展示每个 chunk / 依赖的字节占比
     visualizer({
