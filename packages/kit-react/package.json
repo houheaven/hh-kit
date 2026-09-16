@@ -48,14 +48,12 @@
     "react": ">=18",
     "react-dom": ">=18"
   },
-  "dependencies": {
+  "devDependencies": {
     "@houheaven/kit-assets": "workspace:*",
     "@houheaven/kit-core": "workspace:*",
     "@houheaven/kit-icons": "workspace:*",
     "@houheaven/kit-shared": "workspace:*",
-    "@houheaven/kit-styles": "workspace:*"
-  },
-  "devDependencies": {
+    "@houheaven/kit-styles": "workspace:*",
     "@houheaven/tsconfig": "workspace:*",
     "@types/react": "18.3.31",
     "@types/react-dom": "18.3.7",
