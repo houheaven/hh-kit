@@ -3,7 +3,15 @@
   "version": "1.0.0",
   "author": "立树",
   "license": "ISC",
-  "description": "后天堂套件，支持 Vue、React 等前端框架",
+  "description": "后天堂套件，包含项目中常用的组件、工具函数等，支持 Vue、React 等前端框架",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/houheaven/hh-kit.git"
+  },
+  "homepage": "https://github.com/houheaven/hh-kit#readme",
+  "bugs": {
+    "url": "https://github.com/houheaven/hh-kit/issues"
+  },
   "private": true,
   "packageManager": "pnpm@12.3.4",
   "scripts": {
