@@ -4,6 +4,15 @@
   "description": "后天堂 React 18+ 套件",
   "author": "立树",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/houheaven/hh-kit.git",
+    "directory": "packages/kit-react"
+  },
+  "homepage": "https://github.com/houheaven/hh-kit/tree/main/packages/kit-react#readme",
+  "bugs": {
+    "url": "https://github.com/houheaven/hh-kit/issues"
+  },
   "type": "module",
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",
