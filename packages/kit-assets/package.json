@@ -1,0 +1,22 @@
+{
+  "name": "@houheaven/kit-assets",
+  "version": "0.0.1",
+  "private": true,
+  "description": "后天堂品牌资产：图片、数据（跨技术栈复用）",
+  "type": "module",
+  "exports": {
+    "./assets/*": "./assets/*",
+    "./data/*": "./data/*.ts"
+  },
+  "files": [
+    "assets",
+    "data"
+  ],
+  "scripts": {
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@houheaven/tsconfig": "workspace:*",
+    "typescript": "5.9.3"
+  }
+}
