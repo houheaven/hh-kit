@@ -3,7 +3,7 @@
   <div class="hh-image-dialog-view">
     <header class="page-header">
       <router-link to="/" class="back-link">← 返回首页</router-link>
-      <h1>HhImageDialog</h1>
+      <h1>hhImageDialog</h1>
       <p class="description">简易图片弹窗组件,用于展示二维码等图片。通过 <code>:show</code> 控制显示,点击遮罩或按 ESC 触发 <code>@close</code>。</p>
     </header>
 
@@ -68,7 +68,8 @@
 
 <script setup lang="ts">
   import { ref } from "vue";
-  import { HhImageDialog } from "@houheaven/kit-vue";
+  import hhImageDialog from "@houheaven/kit-vue/hh-image-dialog";
+  import "@houheaven/kit-vue/hh-image-dialog/style.css";
   import qrcode from "@houheaven/kit-assets/assets/wx-mp-houheaven.jpg";
   import VButton from "../components/v-button.vue";
 

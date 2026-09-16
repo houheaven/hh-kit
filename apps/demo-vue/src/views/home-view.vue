@@ -26,7 +26,8 @@
 </template>
 
 <script setup lang="ts">
-  import { HhFooter } from "@houheaven/kit-vue";
+  import hhFooter from "@houheaven/kit-vue/hh-footer";
+  import "@houheaven/kit-vue/hh-footer/style.css";
   import VButton from "../components/v-button.vue";
 
   interface NavEntry {
@@ -35,8 +36,8 @@
   }
 
   const entries: NavEntry[] = [
-    { path: "/hh-footer", label: "HhFooter" },
-    { path: "/hh-image-dialog", label: "HhImageDialog" },
+    { path: "/hh-footer", label: "hhFooter" },
+    { path: "/hh-image-dialog", label: "hhImageDialog" },
   ];
 </script>
 

@@ -3,7 +3,7 @@
   <div class="hh-footer-view">
     <header class="page-header">
       <router-link to="/" class="back-link">← 返回首页</router-link>
-      <h1>HhFooter</h1>
+      <h1>hhFooter</h1>
       <p class="description">页脚组件,通过 props 传入分组导航、版权,链接支持 <code>href</code> 与 <code>image-dialog</code> 两种类型。</p>
     </header>
 
@@ -90,7 +90,8 @@
 </template>
 
 <script setup lang="ts">
-  import { HhFooter } from "@houheaven/kit-vue";
+  import hhFooter from "@houheaven/kit-vue/hh-footer";
+  import "@houheaven/kit-vue/hh-footer/style.css";
   import type { FooterGroup } from "@houheaven/kit-assets/data/hh-footer-types";
   import demoQrcode from "@houheaven/kit-assets/assets/wx-mp-houheaven.jpg";
 
