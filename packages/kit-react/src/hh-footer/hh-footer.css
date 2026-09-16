@@ -1,0 +1,96 @@
+
+.hh-footer {
+  --content-width: 750px;
+  --grid-columns: 4;
+  --grid-gap: 40px;
+
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background: #2a2d33;
+  padding: 40px 0 30px;
+}
+
+.hh-footer * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.hh-footer-grids-3 {
+  --content-width: 560px;
+  --grid-columns: 3;
+}
+
+.hh-footer-grids-2 {
+  --content-width: 360px;
+  --grid-columns: 2;
+}
+
+.hh-footer-grids-1 {
+  --content-width: 200px;
+  --grid-columns: 1;
+}
+
+.hh-footer-content {
+  width: var(--content-width);
+  margin: auto;
+  border: 0 solid #f00;
+}
+
+.hh-footer-links-container {
+  display: grid;
+  grid-template-columns: repeat(var(--grid-columns), 1fr);
+  gap: var(--grid-gap);
+}
+
+.hh-footer-links {
+  box-sizing: border-box;
+  border: 0 solid #f00;
+}
+
+.hh-footer-links-title {
+  font: 15px/1.7em "微软雅黑";
+  color: #818692;
+}
+
+.hh-footer-links-item {
+  list-style-position: outside;
+  list-style-type: none;
+}
+
+.hh-footer-links a {
+  display: inline-block;
+  font: 13px/1.6em "微软雅黑";
+  color: #fff;
+  transition: all 0.2s ease 0s;
+  text-decoration: none;
+  outline: none;
+}
+
+.hh-footer-links a:hover {
+  color: #47c1f4;
+}
+
+.hh-footer-copyright {
+  font: 13px/20px "微软雅黑";
+  color: #818692;
+  text-align: center;
+  padding-top: 30px;
+  clear: both;
+}
+
+@media (max-width: 719px) {
+  .hh-footer {
+    --content-width: 80%;
+    --grid-columns: 2;
+    --grid-gap: 0;
+    padding: 30px 0;
+  }
+  .hh-footer-links {
+    margin: 10px 0;
+  }
+  .hh-footer-copyright {
+    padding-top: 15px;
+  }
+}

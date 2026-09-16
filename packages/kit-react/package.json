@@ -1,22 +1,40 @@
 {
   "name": "@houheaven/kit-react",
   "version": "0.0.1",
-  "description": "后天堂 React 18+ 组件库",
+  "description": "后天堂 React 18+ 套件",
   "author": "立树",
   "license": "MIT",
   "type": "module",
   "main": "./dist/index.cjs",
   "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
+  "sideEffects": [
+    "**/*.css"
+  ],
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
       "import": "./dist/index.js",
       "require": "./dist/index.cjs"
     },
-    "./style.css": "./dist/style.css"
+    "./style.css": "./dist/style.css",
+    "./hh-footer": {
+      "types": "./dist/hh-footer/index.d.ts",
+      "import": "./dist/hh-footer/index.js",
+      "require": "./dist/hh-footer/index.cjs"
+    },
+    "./hh-footer/style.css": "./dist/hh-footer/style.css",
+    "./hh-image-dialog": {
+      "types": "./dist/hh-image-dialog/index.d.ts",
+      "import": "./dist/hh-image-dialog/index.js",
+      "require": "./dist/hh-image-dialog/index.cjs"
+    },
+    "./hh-image-dialog/style.css": "./dist/hh-image-dialog/style.css",
+    "./package.json": "./package.json"
   },
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "publishConfig": {
     "access": "public"
   },
@@ -27,22 +45,27 @@
     "clean": "rm -rf dist .turbo"
   },
   "peerDependencies": {
-    "react": ">=18"
+    "react": ">=18",
+    "react-dom": ">=18"
   },
   "dependencies": {
+    "@houheaven/kit-assets": "workspace:*",
     "@houheaven/kit-core": "workspace:*",
     "@houheaven/kit-icons": "workspace:*",
     "@houheaven/kit-shared": "workspace:*",
-    "@houheaven/kit-styles": "workspace:*",
-    "@houheaven/kit-tokens": "workspace:*"
+    "@houheaven/kit-styles": "workspace:*"
   },
   "devDependencies": {
     "@houheaven/tsconfig": "workspace:*",
     "@types/react": "18.3.31",
+    "@types/react-dom": "18.3.7",
     "@vitejs/plugin-react": "4.7.0",
     "react": "18.3.1",
+    "react-dom": "18.3.1",
+    "rollup-plugin-visualizer": "^7.1.1",
     "typescript": "5.9.3",
     "vite": "7.3.6",
-    "vite-plugin-dts": "5.1.0"
+    "vite-plugin-dts": "5.1.0",
+    "vite-plugin-lib-inject-css": "^2.2.2"
   }
 }

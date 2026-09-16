@@ -1,0 +1,46 @@
+
+.hh-image-dialog__mask {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  background: rgba(0, 0, 0, 0.3);
+  -webkit-backdrop-filter: blur(2px);
+  backdrop-filter: blur(2px);
+}
+
+.hh-image-dialog__wrap {
+  position: fixed;
+  inset: 0;
+  z-index: 2001;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hh-image-dialog__card {
+  width: 200px;
+  padding: 12px;
+  background: #fff;
+  border-radius: 12px;
+  max-width: calc(100vw - 32px);
+  max-height: calc(100vh - 32px);
+  box-sizing: content-box;
+}
+
+.hh-image-dialog__image {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.hh-image-dialog__text {
+  width: 100%;
+  margin: 6px 0;
+  font: 15px/1.6 "微软雅黑", -apple-system, "PingFang SC", sans-serif;
+  color: #555;
+  text-align: center;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
