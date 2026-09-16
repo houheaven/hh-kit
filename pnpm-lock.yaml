@@ -248,7 +248,7 @@ importers:
         version: 3.5.42(typescript@5.9.3)
 
   packages/kit-react:
-    dependencies:
+    devDependencies:
       '@houheaven/kit-assets':
         specifier: workspace:*
         version: link:../kit-assets
@@ -264,7 +264,6 @@ importers:
       '@houheaven/kit-styles':
         specifier: workspace:*
         version: link:../kit-styles
-    devDependencies:
       '@houheaven/tsconfig':
         specifier: workspace:*
         version: link:../../configs/tsconfig
@@ -330,7 +329,7 @@ importers:
         version: 5.9.3
 
   packages/kit-vue:
-    dependencies:
+    devDependencies:
       '@houheaven/kit-assets':
         specifier: workspace:*
         version: link:../kit-assets
@@ -346,7 +345,6 @@ importers:
       '@houheaven/kit-styles':
         specifier: workspace:*
         version: link:../kit-styles
-    devDependencies:
       '@houheaven/tsconfig':
         specifier: workspace:*
         version: link:../../configs/tsconfig
