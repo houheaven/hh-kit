@@ -29,10 +29,9 @@
 </template>
 
 <script setup lang="ts">
-  import { computed, ref } from "vue";
+  import { computed, defineAsyncComponent, ref } from "vue";
   import hhFooterData from "@houheaven/kit-assets/data/hh-footer-data";
   import type { FooterGroup, FooterLink, FooterLinkImageDialog } from "@houheaven/kit-assets/data/hh-footer-types";
-  import hhImageDialog from "../hh-image-dialog/hh-image-dialog.vue";
 
   interface IfFooterProps {
     // 分组导航数据
@@ -50,6 +49,9 @@
   });
 
   defineOptions({ name: "hh-footer" });
+
+  // 异步加载图片弹窗:只有用户实际点击二维码链接时才拉取对应 chunk
+  const hhImageDialog = defineAsyncComponent(async () => import("../hh-image-dialog/hh-image-dialog.vue"));
 
   // useHouheavenData 优先级最高：开启后所有字段一律取 houheaven 内置数据
   const currentGroups = computed<FooterGroup[]>(() => (props.useHouheavenData ? hhFooterData.groups : props.groups));

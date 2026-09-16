@@ -2,6 +2,7 @@
 import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
 import dts from "vite-plugin-dts";
+import { visualizer } from "rollup-plugin-visualizer";
 
 // 多入口配置:全量桶入口 + 每个组件的独立子入口
 // key(camel) 对应输出子目录(kebab)。索引写法确保下游函数只需字符串查表
@@ -66,6 +67,13 @@ export default defineConfig({
   plugins: [
     vue(),
     dts({ include: ["src"] }),
+    // build 后生成 dist/stats.html,展示每个 chunk / 依赖的字节占比
+    visualizer({
+      filename: "dist/stats.html",
+      gzipSize: true,
+      brotliSize: true,
+      template: "treemap",
+    }),
   ],
   build: {
     lib: {
