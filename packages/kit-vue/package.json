@@ -44,14 +44,12 @@
     "typecheck": "vue-tsc --noEmit",
     "clean": "rm -rf dist .turbo"
   },
-  "dependencies": {
+  "devDependencies": {
     "@houheaven/kit-assets": "workspace:*",
     "@houheaven/kit-core": "workspace:*",
     "@houheaven/kit-icons": "workspace:*",
     "@houheaven/kit-shared": "workspace:*",
-    "@houheaven/kit-styles": "workspace:*"
-  },
-  "devDependencies": {
+    "@houheaven/kit-styles": "workspace:*",
     "@houheaven/tsconfig": "workspace:*",
     "@vitejs/plugin-vue": "6.0.8",
     "less": "4.4.1",
