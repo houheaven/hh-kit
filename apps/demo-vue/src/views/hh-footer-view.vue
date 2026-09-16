@@ -91,7 +91,6 @@
 
 <script setup lang="ts">
   import hhFooter from "@houheaven/kit-vue/hh-footer";
-  import "@houheaven/kit-vue/hh-footer/style.css";
   import type { FooterGroup } from "@houheaven/kit-assets/data/hh-footer-types";
   import demoQrcode from "@houheaven/kit-assets/assets/wx-mp-houheaven.jpg";
 

@@ -69,7 +69,6 @@
 <script setup lang="ts">
   import { ref } from "vue";
   import hhImageDialog from "@houheaven/kit-vue/hh-image-dialog";
-  import "@houheaven/kit-vue/hh-image-dialog/style.css";
   import qrcode from "@houheaven/kit-assets/assets/wx-mp-houheaven.jpg";
   import VButton from "../components/v-button.vue";
 
