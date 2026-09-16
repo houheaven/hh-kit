@@ -21,7 +21,7 @@ export default defineConfig({
         globals: { vue: "Vue" },
         assetFileNames: assetInfo => {
           const primaryName = assetInfo.names[0];
-          return primaryName === "style.css" ? "style.css" : primaryName;
+          return primaryName.endsWith(".css") ? "style.css" : primaryName;
         },
       },
     },

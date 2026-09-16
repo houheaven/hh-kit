@@ -1,7 +1,7 @@
 {
   "name": "@houheaven/kit-vue",
   "version": "0.0.1",
-  "description": "后天堂 Vue 3 组件库",
+  "description": "后天堂 Vue 3 套件",
   "author": "立树",
   "license": "MIT",
   "type": "module",
@@ -16,7 +16,9 @@
     },
     "./style.css": "./dist/style.css"
   },
-  "files": ["dist"],
+  "files": [
+    "dist"
+  ],
   "publishConfig": {
     "access": "public"
   },
@@ -26,23 +28,24 @@
     "typecheck": "vue-tsc --noEmit",
     "clean": "rm -rf dist .turbo"
   },
-  "peerDependencies": {
-    "vue": ">=3"
-  },
   "dependencies": {
+    "@houheaven/kit-assets": "workspace:*",
     "@houheaven/kit-core": "workspace:*",
     "@houheaven/kit-icons": "workspace:*",
     "@houheaven/kit-shared": "workspace:*",
-    "@houheaven/kit-styles": "workspace:*",
-    "@houheaven/kit-tokens": "workspace:*"
+    "@houheaven/kit-styles": "workspace:*"
   },
   "devDependencies": {
     "@houheaven/tsconfig": "workspace:*",
     "@vitejs/plugin-vue": "6.0.8",
+    "less": "4.4.1",
     "typescript": "5.9.3",
     "vite": "7.3.6",
     "vite-plugin-dts": "5.1.0",
     "vue": "3.5.42",
     "vue-tsc": "3.3.11"
+  },
+  "peerDependencies": {
+    "vue": ">=3"
   }
 }
