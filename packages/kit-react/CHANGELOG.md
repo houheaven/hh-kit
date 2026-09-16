@@ -1,5 +1,14 @@
 # @houheaven/kit-react
 
+## 0.0.2
+
+### Patch Changes
+
+- 完善包元信息与开源许可。
+  
+  - 新增 `repository`、`homepage`、`bugs` 字段，指向 GitHub 仓库。
+  - 随包发布 MIT `LICENSE`，满足开源合规。
+
 ## 0.0.1
 
 ### Patch Changes

@@ -1,6 +1,6 @@
 {
   "name": "@houheaven/kit-react",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "后天堂 React 18+ 套件",
   "author": "立树",
   "license": "MIT",
@@ -42,7 +42,8 @@
     "./package.json": "./package.json"
   },
   "files": [
-    "dist"
+    "dist",
+    "LICENSE"
   ],
   "publishConfig": {
     "access": "public"
