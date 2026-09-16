@@ -1,8 +1,8 @@
 {
   "name": "@houheaven/kit-styles",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "private": true,
-  "description": "通用/公共样式(reset、utility、动画)",
+  "description": "通用/公共样式（reset、animation 等）",
   "exports": {
     "./reset.css": "./dist/reset.css",
     "./utility.css": "./dist/utility.css",
@@ -15,5 +15,8 @@
     "build": "node scripts/build.mjs",
     "dev": "node scripts/build.mjs --watch",
     "clean": "rm -rf dist .turbo"
+  },
+  "devDependencies": {
+    "less": "4.4.1"
   }
 }

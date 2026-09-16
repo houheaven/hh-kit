@@ -1,0 +1,232 @@
+
+/* ================================================================================================ */
+
+/* 动画特效（旋转） */
+
+@keyframes loader {
+  0% { border-radius: 50%; transform: rotate(-360deg); }
+  50% { border-radius: 40%; transform: rotate(0deg); }
+  100% { border-radius: 50%; transform: rotate(360deg); }
+}
+
+@-moz-keyframes loader {
+  0% { border-radius: 50%; -moz-transform: rotate(-360deg); }
+  50% { border-radius: 40%; -moz-transform: rotate(0deg); }
+  100% { border-radius: 50%; -moz-transform: rotate(360deg); }
+}
+
+@-webkit-keyframes loader {
+  0% { border-radius: 50%; -webkit-transform: rotate(-360deg); }
+  50% { border-radius: 40%; -webkit-transform: rotate(0deg); }
+  100% { border-radius: 50%; -webkit-transform: rotate(360deg); }
+}
+
+/* ================================================================================================ */
+
+/* 动画特效（淡入淡出） */
+
+.fade-enter,
+.fade-enter-from {
+  opacity: 0;
+}
+.fade-enter-active {
+  transition: opacity 0.3s linear;
+}
+.fade-leave-active {
+  transition: opacity 0.2s linear;
+}
+.fade-leave-to {
+  opacity: 0;
+}
+
+/* ================================================================================================ */
+
+/* 动画特效（由小变大） */
+
+.bounce-enter-active {
+  animation: hhBounceIn 0.3s;
+}
+.bounce-leave-active {
+  animation: hhBounceOut 0.2s;
+}
+
+@keyframes hhBounceIn {
+  0% { opacity: 0; transform: scale(0.5); }
+  100% { opacity: 1; transform: scale(1); }
+}
+@keyframes hhBounceOut {
+  0% { opacity: 1; transform: scale(1); }
+  30% { opacity: 0.7; transform: scale(1.05); }
+  100% { opacity: 0; transform: scale(0.7); }
+}
+
+/* ================================================================================================ */
+
+/* 动画特效（由小变大） */
+
+.fancy-enter-active {
+  animation: hhFancyIn 0.3s cubic-bezier(0.4, 0, 0.5, 1);
+}
+.fancy-leave-active {
+  animation: hhFancyOut 0.3s cubic-bezier(1, 0.5, 0, 0.4);
+}
+
+@keyframes hhFancyIn {
+  0% { opacity: 0; transform: scale(0.6); }
+  33% { transform: scale(0.5); }
+  100% { opacity: 1; transform: scale(1); }
+}
+@keyframes hhFancyOut {
+  0% { opacity: 1; transform: scale(1); }
+  33% { transform: scale(1.1); }
+  100% { opacity: 0; transform: scale(0.5); }
+}
+
+/* ================================================================================================ */
+
+/* 动画特效（从下滑入） */
+
+.slideUp-enter,
+.slideUp-enter-from {
+  opacity: 0;
+  transform: translateY(200px);
+}
+.slideUp-enter-to {
+  opacity: 1;
+  transform: translateY(0px);
+}
+.slideUp-enter-active {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.slideUp-leave-active {
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+.slideUp-leave-to {
+  opacity: 0;
+  transform: translateY(100px);
+}
+
+/* ================================================================================================ */
+
+/* 动画特效（从上滑入） */
+
+.slideDown-enter,
+.slideDown-enter-from {
+  opacity: 0;
+  transform: translateY(-200px);
+}
+.slideDown-enter-to {
+  opacity: 1;
+  transform: translateY(0px);
+}
+.slideDown-enter-active {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.slideDown-leave-active {
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+.slideDown-leave-to {
+  opacity: 0;
+  transform: translateY(-100px);
+}
+
+/* ================================================================================================ */
+
+/* 动画特效（从左滑入） */
+
+.slideLeft-enter,
+.slideLeft-enter-from {
+  opacity: 0;
+  transform: translateX(-300px);
+}
+.slideLeft-enter-to {
+  opacity: 1;
+  transform: translateX(0px);
+}
+.slideLeft-enter-active {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.slideLeft-leave-active {
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+.slideLeft-leave-to {
+  opacity: 0;
+  transform: translateX(-200px);
+}
+
+/* ================================================================================================ */
+
+/* 动画特效（从右滑入） */
+
+.slideRight-enter,
+.slideRight-enter-from {
+  opacity: 0;
+  transform: translateX(300px);
+}
+.slideRight-enter-to {
+  opacity: 1;
+  transform: translateX(0px);
+}
+.slideRight-enter-active {
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+.slideRight-leave-active {
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+.slideRight-leave-to {
+  opacity: 0;
+  transform: translateX(200px);
+}
+
+/* ================================================================================================ */
+
+/* 动画特效（从上放大滑入） */
+
+.zoomDown-enter-active {
+  animation: hhZoomDownIn 0.3s;
+}
+.zoomDown-leave-active {
+  animation: hhBounceOut 0.2s;
+}
+
+@keyframes hhZoomDownIn {
+  0% { opacity: 0; transform: scale(0.1) translateY(-2000px); animation-timing-function: ease-in-out; }
+  60% { opacity: 0.6; transform: scale(0.475) translateY(60px); animation-timing-function: ease-out; }
+  100% { opacity: 1; }
+}
+
+/* ================================================================================================ */
+
+/* 动画特效（左右震动） */
+
+.shake-enter-active {
+  animation: shake_x 0.3s;
+}
+.shake-leave-active {
+  animation: hhBounceOut 0.2s;
+}
+
+@keyframes shake_x {
+  0%, 100% { transform: translateX(0); opacity: 1; }
+  10%, 30%, 50%, 70%, 90% { transform: translateX(-10px); }
+  20%, 40%, 60%, 80% { transform: translateX(10px); }
+}
+
+/* ================================================================================================ */
+
+/* 动画特效（上下震动） */
+
+.shake2-enter-active {
+  animation: shake_y 0.3s;
+}
+.shake2-leave-active {
+  animation: hhBounceOut 0.2s;
+}
+
+@keyframes shake_y {
+  0%, 100% { transform: translateY(0); opacity: 1; }
+  10%, 30%, 50%, 70%, 90% { transform: translateY(-10px); }
+  20%, 40%, 60%, 80% { transform: translateY(10px); }
+}
+
+/* ================================================================================================ */
