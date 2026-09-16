@@ -1,0 +1,11 @@
+
+/* 全局重置:与 demo-vue 中 App.vue 的全局样式保持一致 */
+
+html,
+body,
+#root {
+  margin: 0;
+  padding: 0;
+  font-family: -apple-system, "PingFang SC", "Segoe UI", "Microsoft YaHei", sans-serif;
+  color: #2a2d33;
+}

@@ -1,6 +1,6 @@
 {
   "name": "@houheaven/demo-react",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "private": true,
   "type": "module",
   "scripts": {
@@ -9,9 +9,12 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@houheaven/kit-assets": "workspace:*",
     "@houheaven/kit-react": "workspace:*",
+    "@houheaven/kit-tokens": "workspace:*",
     "react": "18.3.1",
-    "react-dom": "18.3.1"
+    "react-dom": "18.3.1",
+    "react-router-dom": "6.30.1"
   },
   "devDependencies": {
     "@houheaven/tsconfig": "workspace:*",

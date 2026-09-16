@@ -1,0 +1,47 @@
+.home-view {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.home-view .hero {
+  text-align: center;
+  padding: 80px 20px 40px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: #fff;
+}
+
+.home-view .hero h1 {
+  margin: 0 0 12px;
+  font-size: 36px;
+  font-weight: 600;
+  letter-spacing: 1px;
+}
+
+.home-view .subtitle {
+  margin: 0;
+  font-size: 15px;
+  opacity: 0.85;
+}
+
+.home-view .nav-section {
+  flex: 1;
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 48px 24px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.home-view .nav-section h2 {
+  font-size: 20px;
+  font-weight: 600;
+  color: #2a2d33;
+  margin: 0 0 24px;
+}
+
+.home-view .nav-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+  gap: 16px;
+}
