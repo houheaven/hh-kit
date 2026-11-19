@@ -2,8 +2,8 @@
   // ========================================================
   // VScode Config
   // 作者：立树
-  // 版本：1.4.3
-  // 日期：2026-09-13
+  // 版本：1.4.4
+  // 日期：2026-10-16
   // ========================================================
   // 工作台
   "workbench.colorTheme": "Visual Studio Dark",
@@ -75,7 +75,7 @@
   // .vscode/settings.json 不格式化
   // settings.json 实际上是以 jsonc 格式处理的（JSON with Comments），而不是 json 格式
   "json.validate.enable": true,
-  "json.format.enable": true,
+  "json.format.enable": false, // 开启后，Trae IDE 环境中所有的 json 文件都会自动格式化，策略会失效
   "[json]": {
     "editor.defaultFormatter": "vscode.json-language-features"
   },
