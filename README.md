@@ -4,7 +4,7 @@
 
 ## 特性
 
-- **多框架支持**：同源设计，产出 Vue 3 与 React 18+ 两套组件库，接口与视觉保持对齐。
+- **多框架支持**：同源设计，产出 Vue 3 与 React 18+ 两套组件库，接口与视觉保持对齐；另有面向 Vue 2.7 项目的独立组件库。
 - **按需引入**：所有对外组件采用子路径导出（subpath exports），配合 tree-shaking 只打包用到的部分。
 - **CSS 自动注入**：消费方引入组件时无需手动 import 样式，构建产物自动加载对应 CSS。
 - **双格式产物**：同时输出 ESM 与 CJS，兼容 Vite / Webpack / Rollup 等主流构建工具，并附带完整 TypeScript 类型声明。
@@ -19,6 +19,7 @@ hh-kit/
 │   └── demo-react/       # React 组件示例站点
 ├── packages/             # 可发布 / 内部包
 │   ├── kit-vue/          # Vue 3 组件库（npm 发布）
+│   ├── kit-vue2/         # Vue 2.7 组件库（npm 发布）
 │   ├── kit-react/        # React 18+ 组件库（npm 发布）
 │   ├── kit-core/         # 与框架无关的核心逻辑
 │   ├── kit-shared/       # 跨框架共享工具
@@ -35,12 +36,19 @@ hh-kit/
 | 包 | 说明 | 版本 |
 | --- | --- | --- |
 | [`@houheaven/kit-vue`](./packages/kit-vue) | Vue 3 组件套件 | [![npm](https://img.shields.io/npm/v/@houheaven/kit-vue.svg)](https://www.npmjs.com/package/@houheaven/kit-vue) |
+| [`@houheaven/kit-vue2`](./packages/kit-vue2) | Vue 2.7 组件套件 | [![npm](https://img.shields.io/npm/v/@houheaven/kit-vue2.svg)](https://www.npmjs.com/package/@houheaven/kit-vue2) |
 | [`@houheaven/kit-react`](./packages/kit-react) | React 18+ 组件套件 | [![npm](https://img.shields.io/npm/v/@houheaven/kit-react.svg)](https://www.npmjs.com/package/@houheaven/kit-react) |
 
-当前提供的组件：
+`kit-vue` / `kit-react` 当前提供的组件：
 
 - **hh-footer**：可定制分组导航与版权文字的页脚组件。
 - **hh-image-dialog**：轻量图片弹窗，适用于二维码等图片展示场景。
+
+`kit-vue2` 当前提供的组件：
+
+- **hh-header**：展示站点标题与当前路由副标题的页头组件，并提供「更多插件」入口。
+- **hh-grids**：响应式栅格布局，支持按手机 / 平板 / 电脑等屏幕宽度分别配置每行列数。
+- **hh-menu**：基于 `hh-grids` 的分组导航菜单，菜单项可路由跳转，也可在新窗口或当前窗口打开链接。
 
 ## 环境要求
 

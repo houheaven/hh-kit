@@ -10,6 +10,7 @@ export default [
       ".stuff/**",
       ".trae/**",
       ".vscode/**",
+      "packages/kit-vue2/**",
       "**/dist/**",
       "**/node_modules/**",
       "**/.turbo/**",

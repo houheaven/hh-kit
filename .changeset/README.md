@@ -10,6 +10,6 @@
 
 ## 发布策略
 
-- 仅 `@houheaven/kit-vue` 和 `@houheaven/kit-react` 会被发布到 npm。
+- 仅 `@houheaven/kit-vue`、`@houheaven/kit-vue2` 和 `@houheaven/kit-react` 会被发布到 npm。
 - 其他 `packages/*` 与 `configs/*` 均为 `"private": true` 内部包,changesets 自动跳过。
-- 版本策略:Independent(两个对外包独立版本号)。
+- 版本策略:Independent(三个对外包独立版本号)。
