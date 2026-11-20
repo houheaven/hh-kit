@@ -18,20 +18,22 @@
     "build": "turbo run build",
     "dev": "turbo run dev",
     "test": "turbo run test",
-    "lint": "eslint .",
+    "lint": "eslint . && turbo run lint",
     "typecheck": "turbo run typecheck",
     "clean": "turbo run clean && rm -rf node_modules",
     "changeset": "changeset",
     "version-packages": "changeset version",
-    "release": "turbo run build --filter=./packages/kit-vue --filter=./packages/kit-react && changeset publish",
+    "release": "turbo run build --filter=./packages/kit-vue --filter=./packages/kit-vue2 --filter=./packages/kit-react && changeset publish",
     "release-vue": "turbo run build --filter=./packages/kit-vue && changeset publish",
-    "release-react": "turbo run build --filter=./packages/kit-react && changeset publish"
+    "release-vue2": "turbo run build --filter=./packages/kit-vue2 && changeset publish",
+    "release-react": "turbo run build --filter=./packages/kit-react && changeset publish",
+    "npm-pack-kit-vue2": "cd packages/kit-vue2 && npm pack"
   },
   "devDependencies": {
-    "@changesets/cli": "3.0.2",
-    "@houheaven/eslint-config-helper": "3.1.0",
+    "@changesets/cli": "3.0.3",
+    "@houheaven/eslint-config-helper": "file:D:/projects/eslint-config-helper/packages/v3-flat/houheaven-eslint-config-helper-3.2.0.tgz",
     "eslint": "9.39.4",
-    "turbo": "2.10.12",
+    "turbo": "2.11.13",
     "typescript": "5.9.3"
   }
 }
