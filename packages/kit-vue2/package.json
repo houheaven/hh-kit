@@ -1,0 +1,82 @@
+{
+  "name": "@houheaven/kit-vue2",
+  "version": "0.0.1",
+  "description": "后天堂 Vue2 套件",
+  "author": "立树",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/houheaven/hh-kit.git",
+    "directory": "packages/kit-vue2"
+  },
+  "homepage": "https://github.com/houheaven/hh-kit/tree/main/packages/kit-vue2#readme",
+  "bugs": {
+    "url": "https://github.com/houheaven/hh-kit/issues"
+  },
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    },
+    "./style.css": "./dist/style.css",
+    "./hh-header": {
+      "types": "./dist/hh-header/index.d.ts",
+      "import": "./dist/hh-header/index.js",
+      "require": "./dist/hh-header/index.cjs"
+    },
+    "./hh-header/style.css": "./dist/hh-header/style.css",
+    "./hh-grids": {
+      "types": "./dist/hh-grids/index.d.ts",
+      "import": "./dist/hh-grids/index.js",
+      "require": "./dist/hh-grids/index.cjs"
+    },
+    "./hh-grids/style.css": "./dist/hh-grids/style.css",
+    "./hh-menu": {
+      "types": "./dist/hh-menu/index.d.ts",
+      "import": "./dist/hh-menu/index.js",
+      "require": "./dist/hh-menu/index.cjs"
+    },
+    "./hh-menu/style.css": "./dist/hh-menu/style.css",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "LICENSE"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "vite build",
+    "dev": "vite build --watch",
+    "lint": "eslint .",
+    "typecheck": "vue-tsc --noEmit",
+    "clean": "rm -rf dist .turbo"
+  },
+  "peerDependencies": {
+    "vue": "^2.7.0",
+    "vue-router": "^3.0.0"
+  },
+  "devDependencies": {
+    "@houheaven/tsconfig": "workspace:*",
+    "@types/node": "26.6.6",
+    "@vitejs/plugin-vue2": "2.3.4",
+    "less": "4.9.1",
+    "rollup-plugin-visualizer": "7.1.3",
+    "typescript": "5.9.3",
+    "vite": "7.3.8",
+    "vite-plugin-dts": "5.1.2",
+    "vite-plugin-lib-inject-css": "2.2.2",
+    "vue": "2.7.16",
+    "vue-router": "3.6.5",
+    "vue-tsc": "3.3.14"
+  }
+}
