@@ -116,6 +116,9 @@ jobs:
             exit 1
           fi
 
+      - name: 构建目标包
+        run: pnpm turbo run build --filter="./${{ steps.target.outputs.dir }}"
+
       - name: 发布到 npm
         working-directory: ${{ steps.target.outputs.dir }}
         env:
