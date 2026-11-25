@@ -1,6 +1,4 @@
 
-/* eslint-disable @typescript-eslint/naming-convention */
-
 import React, { useCallback } from "react";
 import { useNavigate } from "react-router-dom";
 import HhFooter from "@houheaven/kit-react/hh-footer";
@@ -15,6 +13,7 @@ interface NavEntry {
 const entries: NavEntry[] = [
   { path: "/hh-footer", label: "hhFooter" },
   { path: "/hh-image-dialog", label: "hhImageDialog" },
+  { path: "/layout", label: "Layout" },
 ];
 
 interface NavItemProps {
