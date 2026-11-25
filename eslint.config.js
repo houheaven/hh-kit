@@ -20,4 +20,20 @@ export default [
   ...hhEslintConfigHelper.configs.typescript,
   ...hhEslintConfigHelper.configs.vue3Ts,
   ...hhEslintConfigHelper.configs.reactTsx,
+  // {
+  //   files: ["**/*.tsx", "**/*.ts"],
+  //   rules: {
+  //     "@typescript-eslint/naming-convention": [
+  //       "error",
+  //       {
+  //         "selector": "property",
+  //         "format": ["strictCamelCase", "StrictPascalCase"],
+  //         "filter": {
+  //           "regex": "^(@)$",
+  //           "match": false,
+  //         },
+  //       },
+  //     ],
+  //   },
+  // },
 ];

@@ -1,0 +1,27 @@
+.hh-layout {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.hh-layout-header {
+  flex: 0 0 auto;
+}
+
+.hh-layout-body {
+  flex: 1;
+  min-height: 0;
+  display: grid;
+  grid-template-columns: 240px minmax(0, 1fr);
+}
+
+.hh-layout-sidebar,
+.hh-layout-content {
+  min-width: 0;
+}
+
+@media (max-width: 719px) {
+  .hh-layout-body {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
