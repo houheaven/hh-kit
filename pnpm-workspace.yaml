@@ -15,4 +15,4 @@ minimumReleaseAgeExclude:
   - '@turbo/windows-64@2.11.13'
   - '@turbo/windows-arm64@2.11.13'
   - turbo@2.11.13
-  - '@houheaven/eslint-config-helper@3.2.0 || 3.2.3 || 3.2.4'
+  - '@houheaven/eslint-config-helper@3.2.0 || 3.2.3 || 3.2.4 || 3.2.5 || 3.3.0'

@@ -20,6 +20,11 @@ export default [
   ...hhEslintConfigHelper.configs.typescript,
   ...hhEslintConfigHelper.configs.vue3Ts,
   ...hhEslintConfigHelper.configs.reactTsx,
+  {
+    rules: {
+      "react/forbid-component-props": "off",
+    },
+  },
   // {
   //   files: ["**/*.tsx", "**/*.ts"],
   //   rules: {

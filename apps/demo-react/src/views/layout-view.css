@@ -4,16 +4,6 @@
   background: #f5f7fb;
 }
 
-.layout-demo-header {
-  min-height: 64px;
-  padding: 0 28px;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  color: #fff;
-  background: #252b3b;
-}
-
 .layout-demo-brand {
   color: inherit;
   font-size: 18px;
@@ -48,7 +38,7 @@
 }
 
 .layout-demo-content {
-  padding: 48px;
+  /* padding: 48px; */
 }
 
 .layout-demo-eyebrow {

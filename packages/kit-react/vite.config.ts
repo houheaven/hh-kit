@@ -1,4 +1,5 @@
 
+import path from "path";
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
 import dts from "vite-plugin-dts";
@@ -64,13 +65,6 @@ function assetFile(asset: RollupAssetLike): string {
   return resolveAssetName(primary);
 }
 
-// 用 Map 存 kebab 名的 external globals,避开对象字面量 kebab key 的 lint 限制
-const rollupGlobalsMap: Map<string, string> = new Map([
-  ["react", "React"],
-  ["react-dom", "ReactDOM"],
-]);
-const rollupGlobals: Record<string, string> = Object.fromEntries(rollupGlobalsMap);
-
 export default defineConfig({
   plugins: [
     react(),
@@ -85,13 +79,18 @@ export default defineConfig({
       template: "treemap",
     }),
   ],
+  resolve: {
+    alias: {
+      "@": path.resolve(__dirname, "./src"),
+    },
+  },
   build: {
     lib: {
       entry: entryInputs,
     },
-    // 内部私有包必须 bundle 进产物,外部用户 install 时只见 react/react-dom 这两个 peer
+    // 路由与 React 依赖由宿主提供,保证组件共享同一份 Router 上下文
     rollupOptions: {
-      external: ["react", "react/jsx-runtime", "react-dom"],
+      external: ["react", "react/jsx-runtime", "react-dom", "react-router-dom"],
       output: [
         {
           format: "es",
@@ -99,7 +98,6 @@ export default defineConfig({
           chunkFileNames: "chunks/[name]-[hash].js",
           assetFileNames: assetFile,
           exports: "named",
-          globals: rollupGlobals,
         },
         {
           format: "cjs",
@@ -107,7 +105,6 @@ export default defineConfig({
           chunkFileNames: "chunks/[name]-[hash].cjs",
           assetFileNames: assetFile,
           exports: "named",
-          globals: rollupGlobals,
         },
       ],
     },

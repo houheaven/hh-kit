@@ -1,6 +1,10 @@
 {
   "extends": "@houheaven/tsconfig/react.json",
   "compilerOptions": {
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    },
     "allowImportingTsExtensions": true,
     "noEmit": true
   },

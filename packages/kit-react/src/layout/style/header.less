@@ -1,0 +1,54 @@
+
+// @import (reference) "component-reset.less";
+@import (reference) "@houheaven/kit-styles/component-reset.less";
+
+:root {
+  --hh-header-height: 80px;
+}
+
+.hh-header {
+  position: sticky;
+  top: 0;
+  height: calc(var(--hh-header-height));
+  padding: calc(var(--layout-padding));
+  background: #393d49;
+  box-sizing: border-box;
+  border: 1px solid #f00;
+  .hh-component-reset();
+  h1 {
+    display: flex;
+    place-items: center;
+    border: 1px solid #f00;
+  }
+  h1 a {
+    display: block;
+    margin: 0;
+    font-weight: normal;
+    font-size: 28px;
+    line-height: 40px;
+    color: #fff;
+  }
+  h1 p {
+    margin: 0 0 0 10px;
+    font-weight: normal;
+    font-size: 20px;
+    color: #fff;
+    opacity: 0.7;
+  }
+  .btn {
+    position: absolute;
+    right: 25px;
+    top: 25px;
+    padding: 0 20px;
+    font: 15px/35px "微软雅黑";
+    color: #94979e;
+    background: #393d49;
+    border: 1px solid #94979e;
+    transition: all 0.3s ease 0s;
+    border-radius: 20px;
+  }
+  .btn:hover {
+    color: #c4c7d2;
+    border: 1px solid #c4c7d2;
+  }
+}

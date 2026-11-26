@@ -1,7 +1,5 @@
-/* eslint-disable @typescript-eslint/naming-convention, react/forbid-component-props */
 
 import React from "react";
-import { Link } from "react-router-dom";
 import { Layout } from "@houheaven/kit-react";
 import "./layout-view.css";
 
@@ -14,34 +12,15 @@ const navEntries = [
 
 const LayoutView = (): React.JSX.Element => (
   <div className="layout-view">
-    <Layout
-      header={(
-        <div className="layout-demo-header">
-          <Link className="layout-demo-brand" to="/">hh-kit</Link>
-          <span>React 组件演示</span>
-        </div>
-      )}
-      sidebar={(
-        <nav className="layout-demo-nav" aria-label="组件导航">
-          {navEntries.map(entry => (
-            <Link
-              key={entry.path}
-              className={entry.path === "/layout" ? "is-active" : ""}
-              aria-current={entry.path === "/layout" ? "page" : false}
-              to={entry.path}
-            >
-              {entry.label}
-            </Link>
-          ))}
-        </nav>
-      )}
-    >
+    <Layout>
+      <Layout.Header />
       <section className="layout-demo-content">
         <p className="layout-demo-eyebrow">组件示例</p>
         <h1>Layout</h1>
         <p className="layout-demo-description">
           使用顶栏、侧边导航与主内容区组合成响应式应用框架。
         </p>
+        <div style={{ height: "1500px" }} />
         <div className="layout-demo-cards">
           <article>
             <h2>顶栏</h2>

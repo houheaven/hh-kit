@@ -28,11 +28,13 @@
     "release-vue": "turbo run build --filter=./packages/kit-vue && changeset publish",
     "release-vue2": "turbo run build --filter=./packages/kit-vue2 && changeset publish",
     "release-react": "turbo run build --filter=./packages/kit-react && changeset publish",
-    "npm-pack-kit-vue2": "cd packages/kit-vue2 && npm pack"
+    "npm-pack-kit-vue2": "cd packages/kit-vue2 && npm pack",
+    "dev:demo-react": "pnpm -F ./apps/demo-react run dev",
+    "dev:kit-react": "pnpm -F ./packages/kit-react run dev"
   },
   "devDependencies": {
     "@changesets/cli": "3.0.3",
-    "@houheaven/eslint-config-helper": "3.2.4",
+    "@houheaven/eslint-config-helper": "3.3.0",
     "eslint": "9.39.5",
     "turbo": "2.11.13",
     "typescript": "5.9.3"
